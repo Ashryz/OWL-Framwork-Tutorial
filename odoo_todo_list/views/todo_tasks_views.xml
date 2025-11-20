@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="todo_tasks_tree_view" model="ir.ui.view">
+        <field name="name">todo.tasks.tree.view</field>
+        <field name="model">todo.tasks</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="color" widget="color"/>
+                <field name="completed"/>
+            </tree>
+        </field>
+    </record>
+    <record id="todo_tasks_action" model="ir.actions.act_window">
+        <field name="name">ToDo List</field>
+        <field name="res_model">todo.tasks</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Task!
+            </p>
+        </field>
+    </record>
+    <record id="todo_list_action" model="ir.actions.client">
+        <field name="name">ToDo List Owl</field>
+        <field name="tag">odoo_todo_list.action_todo_list_owl</field>
+    </record>
+    <menuitem id="owl_tutorial_root_menu" name="OWL Tutorial">
+        <menuitem id="todo_tasks_root_menu"
+              name="ToDo List"
+              action="todo_tasks_action"/>
+        <menuitem id="todo_list_root_menu"
+              name="ToDo List Owl"
+              action="todo_list_action"/>
+    </menuitem>
+
+</odoo>
