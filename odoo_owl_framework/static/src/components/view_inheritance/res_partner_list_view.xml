@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates xml:space="preserve">
+    <t t-name="odoo_owl_framework.ResPartnerListView.Buttons" t-inherit="web.ListView.Buttons" owl="1">
+        <xpath expr="//t[contains(@t-if, 'isExportEnable')]" position="before">
+            <t t-if="nbSelected">
+                <button class="btn btn-primary ms-2" t-on-click="showSaleOrders">View SO</button>
+            </t>
+        </xpath>
+    </t>
+</templates>
