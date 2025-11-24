@@ -31,6 +31,7 @@
             </field>
             <field name="website" position="before">
                 <field name="username" widget="user_name"/>
+                <field name="expected_salary" widget="range"/>
             </field>
         </field>
     </record>

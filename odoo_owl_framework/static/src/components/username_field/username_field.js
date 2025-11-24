@@ -8,8 +8,6 @@ class UserNameField extends CharField {
 
     setup(){
         super.setup();
-        console.log("Username field ")
-        console.log(this.props)
     }
 
     get emailDomain (){
