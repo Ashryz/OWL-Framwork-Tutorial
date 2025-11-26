@@ -7,9 +7,11 @@
     "depends": [
         'base',
         'web',
+        'odoo_todo_list'
     ],
     "data": [
-        "views/res_partner_view.xml"
+        "views/res_partner_view.xml",
+        "views/odoo_services_menu.xml",
     ],
     "assets": {
         "web.assets_backend": [

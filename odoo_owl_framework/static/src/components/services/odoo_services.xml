@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates xml:space="preserve">
+    <t t-name="odoo_owl_framework.OdooServicesTemplate" owl="1">
+        <div t-attf-class="vh-100 {{state.dark_mode == 'true' ? 'bg-dark' : ''}}">
+            <Layout display="display">
+                <div class="row">
+                    <h3 class="text-center">OwlOdooService</h3>
+                    <div class="col m-3">
+                        <button class="btn btn-primary" t-on-click="showNotification">Show Notification</button>
+                        <button class="btn btn-primary ms-2" t-on-click="showDialog">Show Dialog</button>
+                        <button class="btn btn-primary ms-2" t-on-click="showEffect">Show Effect</button>
+                        <button class="btn btn-primary ms-2" t-on-click="setCookiesServices" title="Set Dark Mode">Set Cookies </button>
+                        <button class="btn btn-primary ms-2" t-on-click="getHttpService" title="get demo data ">Get Http </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                    <table class="table mx-4" t-if="state.data.length">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Brand</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tr t-foreach="state.data" t-as="data" t-key="data.id">
+                            <td><span t-esc="data.title"/></td>
+                            <td><span t-esc="data.brand"/></td>
+                            <td><span t-esc="data.price"/></td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+            </Layout>
+        </div>
+    </t>
+</templates>
