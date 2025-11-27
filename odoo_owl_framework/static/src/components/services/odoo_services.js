@@ -32,7 +32,8 @@ export class OwlOdooServices extends Component {
 
         this.state = useState({
             dark_mode: this.cookie.current.dark_mode,
-            data: []
+            data: [],
+            rpcData:[]
         })
         
 
@@ -87,6 +88,12 @@ export class OwlOdooServices extends Component {
         const http = this.env.services.http
         const data = await http.get("https://dummyjson.com/products")
         this.state.data = data.products.slice(0, 10)
+    }
+
+    async getRpcService(){
+        const rpc = this.env.services.rpc
+        const data = await rpc("/owl/rpcService/res_partner")
+        this.state.rpcData = data
     }
 
 

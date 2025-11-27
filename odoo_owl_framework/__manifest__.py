@@ -12,6 +12,7 @@
     "data": [
         "views/res_partner_view.xml",
         "views/odoo_services_menu.xml",
+        "views/external_library_menu.xml",
     ],
     "assets": {
         "web.assets_backend": [

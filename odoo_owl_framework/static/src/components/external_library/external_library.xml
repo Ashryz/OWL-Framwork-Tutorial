@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates xml:space="preserve">
+    <t t-name="odoo_owl_framework.externalLibraryTemplate" owl="1">
+        <div class="row">
+           <div class="row px-5 vh-100 overflow-y-auto">
+               <div class="col-lg-6 p-5">
+                   <div class="h1 mb-3">International Telephone Input</div>
+                   <div class="mb-3">
+                       <label class="form-label me-2">Phone</label>
+                       <input class="form-control" type="tel" t-ref="phone"/>
+                   </div>
+                   <div>
+                       <button class="btn btn-primary" t-on-click="chekNumberValid">Validated</button>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </t>
+</templates>

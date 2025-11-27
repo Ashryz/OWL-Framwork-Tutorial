@@ -11,6 +11,7 @@
                         <button class="btn btn-primary ms-2" t-on-click="showEffect">Show Effect</button>
                         <button class="btn btn-primary ms-2" t-on-click="setCookiesServices" title="Set Dark Mode">Set Cookies </button>
                         <button class="btn btn-primary ms-2" t-on-click="getHttpService" title="get demo data ">Get Http </button>
+                            <button class="btn btn-primary ms-2" t-on-click="getRpcService" title="get rpc data ">Get RPC </button>
                     </div>
                 </div>
                 <div class="row">
@@ -27,6 +28,20 @@
                             <td><span t-esc="data.title"/></td>
                             <td><span t-esc="data.brand"/></td>
                             <td><span t-esc="data.price"/></td>
+                        </tr>
+                    </table>
+                        <table class="table mx-4" t-if="state.rpcData.length">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tr t-foreach="state.rpcData" t-as="data" t-key="data.id">
+                            <td><span t-esc="data.name"/></td>
+                            <td><span t-esc="data.phone"/></td>
+                            <td><span t-esc="data.email"/></td>
                         </tr>
                     </table>
                     </div>
